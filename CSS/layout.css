@@ -1,0 +1,45 @@
+ /* size
+ grid */
+
+main {
+    display: grid;
+    grid: repeat(8, calc(100vw/8)/auto-flow);
+    /* grid-template-areas:"h h h h h x s s s s s" 
+                        "h h h h h x s s s s s"
+                        "m m m m m m m m m m m"
+                        "v v v g g g g g k k k"
+                        "v v v g g g g g k k k"
+                        "v v v g g g g g k k k"
+                        "v v v g g g g g k k k"
+                        "l l l l l j j j j j j"
+
+                        ; */
+}
+
+
+/* .second-part{
+    display: grid;
+  
+    grid-template-columns: 45% 10% 45%;
+ } */
+ div.second-part div:nth-child(1) 
+ {
+    /* grid-row: 1/3; */
+    /* grid-column:1/2; */
+    grid-column: 3 span;
+    /* grid-area: h;  */
+ }
+ 
+ div.second-part div:nth-child(2){ 
+    /* grid-row: 1/3; */
+    /* grid-column: 2/3; */
+    grid-column: 2 span;
+    /* grid-area: x;  */
+ }
+
+ div.second-part div:nth-child(3)
+ {
+    /* grid-column: 3/4 ; */
+    grid-column: 3 span;
+    /* grid-area: s; */
+ }

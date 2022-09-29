@@ -1,0 +1,11 @@
+/* Variables */
+:root{
+    --base-color: rgba(52, 107, 108, 0.474);
+    --accent-color:rgba(155, 140, 105, 0.3);
+    --circle-color: rgb(165, 228, 230);
+    --base-font: 'Cormorant', serif;
+    --accent-font:'Dancing Script', cursive;
+    --base-border: 1px solid black;
+    --accent-border: 1px double black;
+    
+}
