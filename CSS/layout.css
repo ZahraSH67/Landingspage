@@ -1,45 +1,87 @@
  /* size
  grid */
 
-main {
-    display: grid;
-    grid: repeat(8, calc(100vw/8)/auto-flow);
-    /* grid-template-areas:"h h h h h x s s s s s" 
-                        "h h h h h x s s s s s"
-                        "m m m m m m m m m m m"
-                        "v v v g g g g g k k k"
-                        "v v v g g g g g k k k"
-                        "v v v g g g g g k k k"
-                        "v v v g g g g g k k k"
-                        "l l l l l j j j j j j"
-
-                        ; */
+main{
+   display: grid;
+   grid: auto /repeat(9,1fr);
 }
 
 
-/* .second-part{
-    display: grid;
-  
-    grid-template-columns: 45% 10% 45%;
- } */
- div.second-part div:nth-child(1) 
- {
-    /* grid-row: 1/3; */
-    /* grid-column:1/2; */
-    grid-column: 3 span;
-    /* grid-area: h;  */
+.location{
+   grid-column: 1/5;
+   grid-row: 1/span 2;
+ }
+ .time{
+   grid-column:5/6;
+   grid-row: 1/span 2;
  }
  
- div.second-part div:nth-child(2){ 
-    /* grid-row: 1/3; */
-    /* grid-column: 2/3; */
-    grid-column: 2 span;
-    /* grid-area: x;  */
+ .introduction{ 
+   grid-column: 6/-1;
+   grid-row: 1/span 2;
  }
 
- div.second-part div:nth-child(3)
- {
-    /* grid-column: 3/4 ; */
-    grid-column: 3 span;
-    /* grid-area: s; */
- }
+.title{
+   grid-column: 1/-1;
+   grid-row: 3/span 1;
+}
+.subjects{
+   grid-column: 1/3;
+   grid-row: 4/span 3;
+}
+
+ .dato{
+  grid-column: 3/8;
+  grid-row: 4/span 3;
+}
+.links{
+   grid-row: 4/ span 3;
+   grid-column: 8/-1;
+}
+
+.empty{
+   grid-row: 7/span 1;
+   grid-column: 1/-1;
+}
+
+.address-left{
+   grid-row: 8/span 1;
+   grid-column: 1/6;
+}
+.address-right{
+   grid-row: 8/span 1;
+   grid-column: 6/-1;
+}
+
+
+
+@media screen and (max-width: 600px) {
+ 
+   .dato{
+      grid-column: 1/-1;
+      grid-row: 4/span 4;
+   }
+   .subjects{
+      grid-column: 1/-1;
+      grid-row: 8/ span 4;
+   }
+   .links{
+      grid-column: 1/-1;
+      grid-row: 12/ span 4;
+      
+   }
+   .empty{
+      grid-column: 1/-1;
+      grid-row: 16/span 1;
+   }
+   .address-left {
+      grid-column: 1/-1;
+     grid-row: 17/span 1;
+   }
+   .address-right{
+      grid-column: 1/-1;
+      grid-row: 18/span 1;
+   }
+   
+
+} 

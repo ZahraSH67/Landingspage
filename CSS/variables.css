@@ -6,6 +6,5 @@
     --base-font: 'Cormorant', serif;
     --accent-font:'Dancing Script', cursive;
     --base-border: 1px solid black;
-    --accent-border: 1px double black;
-    
+    --accent-border: 5px double black;  
 }
